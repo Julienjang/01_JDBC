@@ -2,11 +2,7 @@ package common;
 
 import java.io.FileReader;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.Properties;
 
 public class JDBCTemplate {
@@ -18,7 +14,7 @@ public class JDBCTemplate {
         Properties prop = new Properties();
 
         try {
-            prop.load(new FileReader("chap02-statements-lecture-source/src/main/java/config/connection-info.properties"));
+            prop.load(new FileReader("chap03-crud-lecture-source/src/main/java/config/connection-info.properties"));
 
             String driver = prop.getProperty("driver");
             String url = prop.getProperty("url");
